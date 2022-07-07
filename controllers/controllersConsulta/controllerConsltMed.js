@@ -5,7 +5,7 @@ exports.consultarMedicos = async (req, res) => {
     try{
         const todosMedicos = await cadastroMedico.find();
         const nomesMedicos = todosMedicos.map((obj, ind) => {
-            return `${ind+1}. ${obj.nome}`;
+            return `${ind+1}. ${obj.nome} | ${obj.especialidade}`;
         });
         res.json(nomesMedicos);
 
