@@ -3,14 +3,12 @@ const cadastroMedico = require('../../models/modelMedico')
 
 exports.consultarMedicos = async (req, res) => {
     try{
-        let op = 0;
         const todosMedicos = await cadastroMedico.find();
-        const nomesMedicos = todosMedicos.map((obj) => {
-            op++
-            return `${op}.${obj.nome}`;
+        const nomesMedicos = todosMedicos.map((obj, ind) => {
+            return `${ind+1}. ${obj.nome}`;
         });
+        res.json(nomesMedicos);
 
-        res.json(nomesMedicos);    
     } catch(error) {
         res.status(500).json({Msg: "Aconteceu um erro no servidor, tente mais tarde!"})
     }
