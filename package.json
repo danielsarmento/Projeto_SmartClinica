@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "node index",
     "dev": "nodemon index"
-=======
-    "start": "node index"
->>>>>>> a63765ea95c2e0070a21434934e357e32eff2cdd
   },
   "keywords": [],
   "author": "",
