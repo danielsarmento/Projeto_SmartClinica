@@ -10,7 +10,7 @@ exports.consultarMedicos = async (req, res) => {
             return `${op}.${obj.nome}`;
         });
 
-        res.json({nomesMedicos});    
+        res.json(nomesMedicos);    
     } catch(error) {
         res.status(500).json({Msg: "Aconteceu um erro no servidor, tente mais tarde!"})
     }
@@ -20,7 +20,7 @@ exports.consultarEspecialidades = async (req, res) => {
     const especialidade = req.params.especialidade;
     try{
         const medEsp = await cadastroMedico.find({especialidade: especialidade })
-        res.send(medEsp);
+        res.json(medEsp);
     } catch(error) {
         res.status(500).json({Msg: "Aconteceu um erro no servidor, tente mais tarde!"})
     }
