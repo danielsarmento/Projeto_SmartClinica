@@ -20,7 +20,7 @@ routes.post('/cadastroConvenio', controllerCadConvenio.cadastroConvenio);
 // Rotas de Consulta
 routes.get('/consultarMedicos', controllerConstMed.consultarMedicos);
 routes.get('/consultarEspecialidades/:especialidade', controllerConstMed.consultarEspecialidades);
-routes.get('/consultarExamesProntos/:codigo', controllerConstExPronto.consultarExPronto);
+routes.post('/consultarExamesProntos', controllerConstExPronto.consultarExPronto);
 routes.get('/consultarExames', controllerConstExames.consultarExames);
 routes.get('/consultarConvenio', controllerConstConv.consultarConvenios);
 
